@@ -1,19 +1,19 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- * main - Prints the lowercase alphabet in reverse, Followed by a new line
- * Return: Always 0.
+ * main - Entry point
+ * Description: prints char below 10
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	char letter;
+	int a;
 
-	for (letter = 'z'; letter >= 'a'; letter--)
-
-	putchar(letter);
-
+	for (a = 0; a < 10; a++)
+	{
+		putchar(a + '0');
+	}
 	putchar('\n');
-
 	return (0);
 }
