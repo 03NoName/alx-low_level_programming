@@ -2,7 +2,7 @@
 
 
 /**
-  * main - The main printing funtion
+  * main - the main printing funtion
   * less than 4000000.
   * Return: 0.
   */
