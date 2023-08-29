@@ -23,11 +23,10 @@ while (*haystack)
 	if (haystack[index] == needle[index])
 	{
 		do {
-		if (needle[index + 1] == '\0')
-			return (haystack);
-		index++;
-		}
-		while (haystack[index] == needle[index]);
+			if (needle[index + 1] == '\0')
+				return (haystack);
+			index++;
+		} while (haystack[index] == needle[index]);
 	}
 	haystack++;
 	}
