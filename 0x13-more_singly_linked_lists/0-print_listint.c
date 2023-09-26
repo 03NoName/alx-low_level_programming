@@ -12,10 +12,16 @@ size_t print_listint(const listint_t *a)
 
 	while (a)
 	{
-		printf("%d\n", a->n);
+		if (a->n == 0)
+		{
+			printf("Encountered a NULL value in the list.\n");
+		}
+		else
+		{
+			printf("%d\n", a->n);
+		}
 		num++;
 		a = a->next;
 	}
-
 	return (num);
 }
