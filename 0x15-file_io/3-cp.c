@@ -48,10 +48,10 @@ void close_file(int nf)
 /**
  * main - Copies all contents of one file to another.
  *
- * Desc: Argument incorrect - exit code 97.
- * if file_from does not exist - exit code 98.
- * if file_to cannot be created - exit code 99.
- * if file_from or file_to can't close - exit code 100.
+ * Desc: If Argument count incorrect - exit code 97.
+ * if file_from does not exist or can't be read  - exit code 98.
+ * if file_to cannot be written to or created - exit code 99.
+ * if file_from or file_to can't be  closed - exit code 100.
  *
  * Return: 0 if successful.
  * @argc: Number of arguements supplied in a program
