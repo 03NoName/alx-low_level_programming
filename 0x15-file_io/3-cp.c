@@ -53,9 +53,9 @@ void close_file(int nf)
  * if file_to cannot be written to or created - exit code 99.
  * if file_from or file_to can't be  closed - exit code 100.
  *
- * Return: 0 if successful.
- * @argc: Number of arguements supplied in a program
- * @argv: Array of pointers to set of arguments.
+ * Return: 0 on success.
+ * @argc: Number of arguements supplied to a program
+ * @argv: Array of pointers to the set of arguments.
  *
  */
 
