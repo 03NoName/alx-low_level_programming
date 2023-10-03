@@ -28,20 +28,21 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
+ * close_file - Close all file descriptions.
+ * @nf: File description to close.
  */
-void close_file(int fd)
+
+void close_file(int nf)
 {
-	int c;
+        int p;
 
-	c = close(fd);
+        p = close(nf);
 
-	if (c == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
-	}
+        if (p == -1)
+        {
+                dprintf(STDERR_FILENO, "Error: Can't close nf %d\n", nf);
+                exit(100);
+        }
 }
 
 /**
