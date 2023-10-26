@@ -1,39 +1,29 @@
 #include "main.h"
-#include <stddef.h>
 
 /**
- * binary_to_uint - converts a binary number to unsigned int
- * @b: string containing the binary number
- * Return: the converted number, or 0 if
- * there are non-binary characters or NULL
+ * binary_to_uint - function converts a binary number to an unsigned int.
+ * @b: pointer to a string containing a binary number
+ *
+ * Return: unsigned int with decimal value of binsry number, or 0 if error
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len;
-	int base = 2;
-	size_t sum = 0;
-	size_t pow = 1;
-	size_t i = 0;
-	size_t j = 0;
+	int a;
+	unsigned int num;
 
-	if (b == NULL)
+	num = 0;
+	if (!b)
 		return (0);
-	for (len = 0; b[len] != '\0'; len++)
-		;
-
-	if (len == 1 && (b[0] == '0' || b[0] == '1'))
+	for (a = 0; b[a] != '\0'; a++)
 	{
-		return (b[0] - 48);
+		if (b[a] != '0' && b[a] != '1')
+			return (0);
 	}
-	for (i = 0; b[i] != '\0'; i++)
+	for (a = 0; b[a] != '\0'; a++)
 	{
-		if  (b[i] != '0' && b[i] != '1')
-		return (0);
-		for (j = len - 1; j > 0; j--)
-		pow = pow * base;
-		sum = sum + (pow * (b[i] - 48));
-		len--;
-		pow = 1;
+		num <<= 1;
+		if (b[a] == '1')
+			num += 1;
 	}
-	return (sum);
+	return (num);
 }
